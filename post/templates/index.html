@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+<h1>Baraa site</h1>
+
+{% for post in posts %}
+<h2>{{post.title}}</h2>
+<h5>{{post.body}}</h5>
+<br>
+{% endfor %}
+
+<a href="{% url 'newPost' %}">Add New Post</a>
+{% endblock %}
